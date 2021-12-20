@@ -2,9 +2,6 @@
 
 A chat web app that has a chat room where you can send and recieve real time messages, a home page which consumes a public free pics api and display them as a feed and a page that you can update your profile pic by sharing the link of the photo you want.
 
-## Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
