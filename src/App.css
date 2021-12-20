@@ -1,38 +1,347 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/*---------------Navigation bar---------------*/
+.Nav {
+  position: sticky;
+  top: 0;
+  background-color: black;
   display: flex;
-  flex-direction: column;
+  width: 100%;
+  height: 10vh;
+  color: white;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  box-shadow: 0px 15px 20px rgb(0, 0, 0);
+  z-index: 1;
+}
+
+.icon {
+  color: white;
+  font-size: 20px;
+  margin: 5px;
+}
+
+button {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  border: none;
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.google {
+  font-size: 20px;
+  padding: 2px;
+}
+.Hamb {
+  font-size: 40px;
+  cursor: pointer;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.signOutNav {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: 0px;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  color: black;
+  /* box-shadow: 0px 0px 20px 20px black; */
+  z-index: 100;
+}
+.signOutNavList {
+  width: 50%;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  /* box-shadow: 0px 0px 20px 20px black; */
+  z-index: 100;
+}
+.exit {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 70px;
+  background-color: white;
+  cursor: pointer;
+  transition: 1s;
+}
+.exit:hover {
+  background-color: rgb(173, 173, 173);
+  font-size: 40px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+li {
+  display: flex;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+  font-size: 30px;
+  text-decoration: none;
+  transition: 1s;
+  padding-bottom: 10px;
+}
+.signOut {
+  margin: 10px;
+  font-size: 30px;
+  background-color: rgb(173, 173, 173);
+}
+.signOut:hover {
+  background-color: white;
+}
+li:hover {
+  background-color: white;
+  color: black;
+}
+a {
+  text-decoration: none;
+}
+
+/*---------------Chat ROom---------------*/
+
+.chatroom {
+  height: 85vh;
+  background-color: rgb(219, 211, 211);
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.chatroom::-webkit-scrollbar {
+  display: none;
+}
+.textPlace {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  background-color: black;
+  height: 5%;
+}
+input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+}
+input:focus {
+  border: none;
+  outline: none;
+}
+.messageSent {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  width: fit-content;
+  text-align: left;
+  padding: 0px 0px;
+  padding-left: 20px;
+  margin: 15px 5px;
+  box-shadow: 0px 5px 10px black;
+  align-self: flex-end;
+}
+p {
+  max-width: 200px;
+  overflow-wrap: break-word;
+}
+.messageRecieved {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  width: fit-content;
+  padding: 0px 0px;
+  padding-right: 20px;
+  margin: 15px;
+  box-shadow: 0px 5px 10px black;
+}
+
+.picOfSent {
+  margin: 10px;
+  width: 35px;
+  height: 35px;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+.picOfRecieved {
+  margin: 10px;
+  width: 35px;
+  height: 35px;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+/*---------------Welcome Page---------------*/
+
+.welcome {
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://images.unsplash.com/photo-1604881991108-a3a35673b7c4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: rgb(0, 0, 0);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.picForm {
+  margin: 5%;
+  box-shadow: 0px 0px 20px 0px black;
+  padding: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+label {
+  color: black;
+  font-size: 40px;
+}
+@keyframes example {
+  0% {
+    background-color: rgb(255, 0, 0);
   }
-  to {
-    transform: rotate(360deg);
+  25% {
+    background-color: rgb(0, 255, 221);
+  }
+  50% {
+    background-color: rgb(255, 251, 0);
+  }
+  75% {
+    background-color: rgb(51, 255, 0);
+  }
+  100% {
+    background-color: rgb(255, 0, 0);
   }
 }
+.picUrl {
+  background-color: rgba(0, 0, 0, 0.466);
+  height: 30px;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-size: 20px;
+  animation-name: example;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+}
+.next {
+  cursor: pointer;
+  width: 100px;
+  height: 50px;
+  margin: 20px;
+  border: none;
+  color: white;
+  background-color: black;
+  font-size: 20px;
+}
+.next:hover {
+  transition: 1s;
+  background-color: white;
+  color: black;
+}
+
+.pages {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+}
+.Container {
+  display: grid;
+  grid-gap: 10px;
+  padding: 1%;
+}
+
+.imgFeed {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.pic {
+  width: 100%;
+}
+.picInfo {
+  display: flex;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+.Unsplashlink:hover {
+  cursor: pointer;
+}
+.btns {
+  font-size: 40px;
+}
+.btns:hover {
+  cursor: pointer;
+  transform: scale(2);
+}
+
+.welcomeForm {
+  width: 50%;
+  margin-top: 40px;
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0px 20px 5px rgb(0, 0, 0);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.welcomeForm h1 {
+  font-size: 24px;
+}
+.welcomeForm h2 {
+  font-size: 20px;
+  letter-spacing: 2px;
+  margin-top: 20px;
+}
+
+.welcomeForm button {
+  margin-top: 30px;
+  transition: 1s;
+}
+.welcomeForm button:hover {
+  background-color: black;
+  color: white;
+}
+
+
+.Footer {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  width: 100%;
+  color: white;
+  font-size: 9px;
+}
+
