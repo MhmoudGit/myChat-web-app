@@ -2,6 +2,8 @@
 
 A chat web app that has a chat room where you can send and recieve real time messages, a home page which consumes a public free pics api and display them as a feed and a page that you can update your profile pic by sharing the link of the photo you want.
 
+demo link : https://mychat-759aa.web.app/
+
 
 ## Available Scripts
 
